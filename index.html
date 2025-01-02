@@ -1,123 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paul Stotts</title>
-    <link rel="icon" href="/images/favicon.png" type="image/png">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background-color: #f4f4f9;
-            min-height: 100vh;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paul Stotts</title>
+  <link rel="icon" href="/images/favicon.png" type="image/png">
+  <style>
+    /* Scales up everything a bit more than normal */
+    html {
+      font-size: 18px; /* Adjust up/down to taste for overall sizing */
+    }
 
-        .content {
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-            gap: 40px;
-            max-width: 1200px;
-            width: 100%;
-            padding: 20px;
-        }
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #f4f4f9;
+      min-height: 100vh;
+    }
 
-        .photo {
-            flex: 1;
-            max-width: 400px;
-        }
+    .content {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      max-width: 1200px;
+      width: 100%;
+      padding: 40px; /* Increased for breathing room */
+      gap: 40px;
+    }
 
-        .details {
-            flex: 1;
-            max-width: 400px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+    .photo {
+      flex: 1;
+      max-width: 600px; /* Larger photo area */
+    }
 
-        .details .logo {
-            margin-bottom: 20px;
-        }
+    .photo img {
+      width: 100%;
+      height: auto;
+    }
 
-        .logo img {
-            max-width: 150px;
-            border-radius: 50%;
-        }
+    /* Right side: circle logo and text side-by-side */
+    .details {
+      flex: 1;
+      display: flex;
+      flex-direction: row; /* Place logo and text next to each other */
+      align-items: center;
+      max-width: 600px;
+      gap: 20px;
+    }
 
-        .text {
-            text-align: left;
-            line-height: 1.6;
-            color: #333;
-            padding-top: 20px;
-        }
+    .logo img {
+      /* Make the logo bigger, close to photo's height */
+      width: 250px; 
+      height: 250px; 
+      border-radius: 50%;
+      object-fit: cover;
+    }
 
-        .social-links {
-            margin-top: 20px;
-            display: flex;
-            gap: 10px;
-        }
+    .text {
+      line-height: 1.6;
+      color: #333;
+      font-size: 1.2rem; /* Larger text */
+      flex: 1; /* Let the text expand */
+    }
 
-        .social-links a {
-            color: #fff;
-            background: #0073b1;
-            padding: 10px 15px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 14px;
-        }
+    .social-links {
+      margin-top: 30px;
+      display: flex;
+      gap: 15px;
+      font-size: 1rem; /* Bumped button text size */
+    }
 
-        .social-links a.twitter {
-            background: #1da1f2;
-        }
+    .social-links a {
+      color: #fff;
+      background: #0073b1;
+      padding: 15px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
 
-        .social-links a.github {
-            background: #333;
-        }
+    .social-links a.twitter {
+      background: #1da1f2;
+    }
 
-        footer {
-            margin-top: 20px;
-            font-size: 0.8rem;
-            color: #555;
-            text-align: center;
-        }
-    </style>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    .social-links a.github {
+      background: #333;
+    }
+
+    /* Use same style for email button, optionally choose a different color */
+    .social-links a.email {
+      background: #0073b1;
+    }
+
+    footer {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #555;
+      text-align: center;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="content">
-        <div class="photo">
-            <img src="/images/paulphoto.jpg" alt="Paul Stotts">
-        </div>
-        <div class="details">
-            <div class="logo">
-                <img src="/images/PaulStottsCircle.png" alt="Paul Stotts Logo">
-            </div>
-            <div class="text">
-                <p>Hi, I'm Paul. I'm a Detroit native but currently live in Minneapolis by way of the Pacific Northwest. I’m an
-                    entrepreneur at heart and Managing Partner of True Tracking and Precision Fleet Support.</p>
-                <p>In my leisure time I enjoy traveling, playing guitar and investing in the singularity. I also enjoy taking
-                    short-term positions, futures, and stock options as a form of slightly-educated gambling. My sports
-                    allegiances lie with the Detroit Tigers, Minnesota Wild, and the Portland Timbers.</p>
-            </div>
-        </div>
+  <div class="content">
+    <div class="photo">
+      <img src="/images/paulphoto.jpg" alt="Paul Stotts">
     </div>
-    <div class="social-links">
-        <a href="https://twitter.com/pauldstotts" target="_blank" class="twitter">Twitter</a>
-        <a href="https://www.linkedin.com/in/pdstotts/" target="_blank">LinkedIn</a>
-        <a href="https://www.instagram.com/temperexpectations/" target="_blank">Instagram</a>
-        <a href="https://github.com/gitpds" target="_blank" class="github">GitHub</a>
-    </div>
-    <footer>
-        <p>600 1st Ave Ste 330 #65787 &middot; Seattle, WA &middot; 98104</p>
-    </footer>
-</body>
 
+    <!-- Details area: Logo and text side-by-side -->
+    <div class="details">
+      <div class="logo">
+        <img src="/images/PaulStottsCircle.png" alt="Paul Stotts Logo">
+      </div>
+      <div class="text">
+        <p>Hi, I'm Paul. I'm a Detroit native but currently live in Minneapolis by way of the Pacific Northwest. I’m an
+          entrepreneur at heart and Managing Partner of True Tracking and Precision Fleet Support.</p>
+        <p>In my leisure time I enjoy traveling, playing guitar and investing in the singularity. I also enjoy taking
+          short-term positions, futures, and stock options as a form of slightly-educated gambling. My sports
+          allegiances lie with the Detroit Tigers, Minnesota Wild, and the Portland Timbers.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="social-links">
+    <a href="https://twitter.com/pauldstotts" target="_blank" class="twitter">Twitter</a>
+    <a href="https://www.linkedin.com/in/pdstotts/" target="_blank">LinkedIn</a>
+    <a href="https://www.instagram.com/temperexpectations/" target="_blank">Instagram</a>
+    <a href="https://github.com/gitpds" target="_blank" class="github">GitHub</a>
+    <!-- New Email button -->
+    <a href="mailto:paul@paulstotts.com" class="email">Email</a>
+  </div>
+
+  <footer>
+    <p>600 1st Ave Ste 330 #65787 &middot; Seattle, WA &middot; 98104</p>
+  </footer>
+</body>
 </html>
