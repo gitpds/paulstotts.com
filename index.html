@@ -35,19 +35,14 @@
       max-width: 1440px;
       width: 100%;
       padding: 2px;
-      /* gap: 2px; Previously 24px */
+      gap: 5px;  /* Reduced from 24px to ~20% of original */
     }
 
     /* Photo ~20% larger: 540px -> 648px */
-    /* .photo {
-      flex: 1;
-      max-width: 648px;
-    } */
-
+/* Update the photo container size */
     .photo {
-      flex: 0 1 40%; /* Adjust the size as needed */
-      max-width: 40%;
-      align-items: right;
+      flex: 1;
+      max-width: 720px;  /* Increased from 648px for taller image */
     }
 
     .photo img {
@@ -57,20 +52,12 @@
     }
 
     /* Right column stays the same, but circle remains at 300px. */
-    /* .details {
+    .details {
       flex: 1;
       max-width: 720px;
       display: flex;
       flex-direction: column;
       align-items: center;
-    } */
-
-     .details {
-        flex: 0 1 60%;
-        max-width: 720px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
     }
 
     .logo img {
