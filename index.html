@@ -50,7 +50,7 @@
     /* Right column stays the same, but circle remains at 300px. */
     .details {
       flex: 1.5;  /* Reduce from 1 to make it narrower */
-      max-width: 450px;  /* Reduce from 720px to match your text width */
+      max-width: 550px;  /* Reduce from 720px to match your text width */
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -72,29 +72,30 @@
     */
     .text {
       margin-top: 1.5rem;
-      max-width: 450px;
+      max-width: 550px;
       width: 100%;
-      line-height: 1.4;
-      font-size: 1.8rem;
+      line-height: 1.6;  /* Slightly increased line height */
+      font-size: 1.4rem;  /* Made slightly smaller */
       color: #333;
       text-align: left;
-      margin-left: auto;  /* Add this */
-      margin-right: auto; /* Add this */
+      font-weight: 300;  /* Added thinner weight to body text */
     }
 
     /* Spacing between paragraphs */
     .text p {
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
     }
 
     /* Styled heading */
     .text .intro {
       text-transform: uppercase;
-      font-weight: 600;
-      font-size: 2.8rem; /* Slightly bigger heading than body text */
-      letter-spacing: 0.05em;
+      font-weight: 300;  /* Changed from 600 to 300 for thinner weight */
+      font-size: 2.4rem;  /* Slightly adjusted size */
+      letter-spacing: 0.15em;  /* Increased letter spacing */
       margin-bottom: 1rem;
+      color: #333;
     }
+
 
     /* Social links remain the same. Adjust if you want them smaller or bigger. */
     .social-links {
