@@ -6,7 +6,6 @@
   <title>Paul Stotts</title>
   <link rel="icon" href="/images/favicon.png" type="image/png"/>
   <style>
-    /* Base font-size remains 12px for some overall scale control. */
     html {
       font-size: 12px;
     }
@@ -23,7 +22,6 @@
       min-height: 100vh;
     }
 
-    /* Reduce the gap further between columns */
     .content {
       display: flex;
       align-items: flex-start;
@@ -31,14 +29,12 @@
       max-width: 1440px;
       width: 100%;
       padding: 10px;
-      gap: 50px;  /* Reduced even further */
+      gap: 50px;
     }
 
-    /* Photo ~20% larger: 540px -> 648px */
-/* Update the photo container size */
     .photo {
       flex: 1;
-      max-width: 648px;  /* Increased from 648px for taller image */
+      max-width: 648px;
     }
 
     .photo img {
@@ -47,10 +43,9 @@
       display: block;
     }
 
-    /* Right column stays the same, but circle remains at 300px. */
     .details {
-      flex: 1.5;  /* Reduce from 1 to make it narrower */
-      max-width: 550px;  /* Reduce from 720px to match your text width */
+      flex: 1.5;
+      max-width: 550px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -66,49 +61,35 @@
       object-fit: cover;
     }
 
-    /*
-      Text: doubled from 1.3rem -> 2.6rem.
-      We keep it narrower if desired, at 450px max.
-    */
     .text {
       margin-top: 1.5rem;
       max-width: 550px;
       width: 100%;
-      line-height: 1.6;  /* Slightly increased line height */
-      font-size: 1.4rem;  /* Made slightly smaller */
+      line-height: 1.6;
+      font-size: 1.4rem;
       color: #333;
       text-align: left;
-      font-weight: 300;  /* Added thinner weight to body text */
+      font-weight: 300;
     }
 
-    /* Spacing between paragraphs */
     .text p {
       margin-bottom: 1.5rem;
     }
 
-    /* Styled heading */
     .text .intro {
       text-transform: uppercase;
-      font-weight: 300;  /* Changed from 600 to 300 for thinner weight */
-      font-size: 2.4rem;  /* Slightly adjusted size */
-      letter-spacing: 0.15em;  /* Increased letter spacing */
+      font-weight: 300;
+      font-size: 2.4rem;
+      letter-spacing: 0.15em;
       margin-bottom: 1rem;
       color: #333;
     }
 
-
-    /* Social links remain the same. Adjust if you want them smaller or bigger. */
     .social-links {
-      margin-top: 3rem;
+      margin-top: 2rem;
       display: flex;
       gap: 2rem;
-    }
-
-    .social-links {
-      margin-top: 2rem;  /* Reduced from 3rem */
-      display: flex;
-      gap: 2rem;
-      /* Remove any absolute positioning if present */
+      justify-content: center;
     }
 
     .social-links img {
@@ -117,7 +98,13 @@
       display: block;
     }
 
-    /* Footer text (can stay smaller if desired) */
+    .address {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 1.1rem;
+      color: #555;
+    }
+
     footer {
       margin-top: 1.5rem;
       font-size: 1.1rem;
@@ -125,7 +112,6 @@
       text-align: center;
     }
   </style>
-  <!-- Inter (modern font) -->
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
     rel="stylesheet"
@@ -134,12 +120,10 @@
 
 <body>
   <div class="content">
-    <!-- Left column: Photo -->
     <div class="photo">
       <img src="/images/paulphoto.jpg" alt="Paul Stotts" />
     </div>
 
-    <!-- Right column: Circle + text -->
     <div class="details">
       <div class="logo">
         <img src="/images/PaulStottsCircle.png" alt="Paul Stotts Logo" />
@@ -148,14 +132,13 @@
         <p class="intro">HI, I'M PAUL.</p>
         <p>
           I'm a Detroit native but currently live in Minneapolis by way of the Pacific Northwest.
-          I’m an entrepreneur at heart and Managing Partner of True Tracking and Precision Fleet Support.
+          I'm an entrepreneur at heart and Managing Partner of True Tracking and Precision Fleet Support.
         </p>
         <p>
           In my leisure time I enjoy traveling, playing guitar, and investing in the singularity.
           I also enjoy taking short-term positions, futures, and stock options as a form of slightly-educated gambling.
           My sports allegiances lie with the Detroit Tigers, Minnesota Wild, and the Portland Timbers.
         </p>
-        <p>
       </div>
       <div class="social-links">
         <a href="https://twitter.com/pdstotts" target="_blank">
@@ -173,15 +156,12 @@
         <a href="mailto:paul@paulstotts.com">
           <img src="/images/email.svg" alt="Email" />
         </a>
-        <p>
+      </div>
       <div class="address">
-      <p>600 1st Ave Ste 330 #65787 &middot; Seattle, WA &middot; 98104</p>
-      </div>
-      </div>
+        <p>600 1st Ave Ste 330 #65787 · Seattle, WA · 98104</p>
       </div>
     </div>
   </div>
-
 
   <footer>
   </footer>
