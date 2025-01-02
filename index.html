@@ -104,9 +104,11 @@
       gap: 2rem;
     }
 
-    .social-links a {
-      display: inline-block;
-      text-decoration: none;
+    .social-links {
+      margin-top: 2rem;  /* Reduced from 3rem */
+      display: flex;
+      gap: 2rem;
+      /* Remove any absolute positioning if present */
     }
 
     .social-links img {
@@ -117,7 +119,7 @@
 
     /* Footer text (can stay smaller if desired) */
     footer {
-      margin-top: 3rem;
+      margin-top: 1.5rem;
       font-size: 1.1rem;
       color: #555;
       text-align: center;
@@ -154,30 +156,30 @@
           My sports allegiances lie with the Detroit Tigers, Minnesota Wild, and the Portland Timbers.
         </p>
       </div>
+      <div class="social-links">
+        <a href="https://twitter.com/pdstotts" target="_blank">
+          <img src="/images/x.svg" alt="X (formerly Twitter)" />
+        </a>
+        <a href="https://linkedin.com/in/pdstotts" target="_blank">
+          <img src="/images/linkedin.svg" alt="LinkedIn" />
+        </a>
+        <a href="https://www.instagram.com/temperexpectations/" target="_blank">
+          <img src="/images/instagram.svg" alt="Instagram" />
+        </a>
+        <a href="https://github.com/gitpds" target="_blank">
+          <img src="/images/github.svg" alt="GitHub" />
+        </a>
+        <a href="mailto:paul@paulstotts.com">
+          <img src="/images/email.svg" alt="Email" />
+        </a>
+        <p>600 1st Ave Ste 330 #65787 &middot; Seattle, WA &middot; 98104</p>
+
+      </div>
     </div>
   </div>
 
-  <!-- Social icons: local SVGs -->
-  <div class="social-links">
-    <a href="https://twitter.com/pdstotts" target="_blank">
-      <img src="/images/x.svg" alt="X (formerly Twitter)" />
-    </a>
-    <a href="https://linkedin.com/in/pdstotts" target="_blank">
-      <img src="/images/linkedin.svg" alt="LinkedIn" />
-    </a>
-    <a href="https://www.instagram.com/temperexpectations/" target="_blank">
-      <img src="/images/instagram.svg" alt="Instagram" />
-    </a>
-    <a href="https://github.com/gitpds" target="_blank">
-      <img src="/images/github.svg" alt="GitHub" />
-    </a>
-    <a href="mailto:paul@paulstotts.com">
-      <img src="/images/email.svg" alt="Email" />
-    </a>
-  </div>
 
   <footer>
-    <p>600 1st Ave Ste 330 #65787 &middot; Seattle, WA &middot; 98104</p>
   </footer>
 </body>
 </html>
