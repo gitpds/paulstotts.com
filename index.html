@@ -29,36 +29,36 @@
       - Gap drastically reduced from 24px -> 5px (~20%).
     */
     .content {
-      display: flex;
-      align-items: flex-start;       /* keep items top-aligned */
-      justify-content: space-between; /* space columns evenly with no big center gap */
-      max-width: 1440px;
-      width: 100%;
-      margin: 0 auto;                /* center the overall container if you like */
-      padding: 8px;
-      gap: 24px;                     /* or whatever small gap you want between columns */
-    }
+    display: flex;
+    align-items: flex-start;       /* keep items top-aligned */
+    justify-content: space-between; /* space columns evenly with no big center gap */
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;                /* center the overall container if you like */
+    padding: 8px;
+    gap: 24px;                     /* or whatever small gap you want between columns */
+  }
 
-    .photo {
-      /* Let’s drop flex:1 and give it a max-width instead */
-      max-width: 400px;             /* pick whatever feels right */
-      flex: 0 0 auto;               /* don’t let it grow/shrink arbitrarily */
-    }
+  .photo {
+    /* Let’s drop flex:1 and give it a max-width instead */
+    max-width: 400px;             /* pick whatever feels right */
+    flex: 0 0 auto;               /* don’t let it grow/shrink arbitrarily */
+  }
 
-    .photo img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
+  .photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 
-    /* Right column can stay flexible or also have a max-width. */
-    .details {
-      flex: 1;                      /* optional—keeps the text column flexible */
-      max-width: 720px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+  /* Right column can stay flexible or also have a max-width. */
+  .details {
+    flex: 1;                      /* optional—keeps the text column flexible */
+    max-width: 720px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
 
     .logo img {
