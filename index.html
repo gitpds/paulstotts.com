@@ -49,14 +49,14 @@
 
     /* Right column stays the same, but circle remains at 300px. */
     .details {
-      flex: 1;
-      max-width: 720px;
+      flex: 0.8;  /* Reduce from 1 to make it narrower */
+      max-width: 400px;  /* Reduce from 720px to match your text width */
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
-      margin-left: auto;  /* Add this */
-      margin-right: auto; /* Add this */
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .logo img {
@@ -72,7 +72,7 @@
     */
     .text {
       margin-top: 1.5rem;
-      max-width: 350px;
+      max-width: 400px;
       width: 100%;
       line-height: 1.4;
       font-size: 1.8rem;
