@@ -19,22 +19,15 @@
             min-height: 100vh;
         }
 
-        header {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        header h1 {
-            font-size: 2rem;
-            color: #333;
-        }
-
         .content {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
-            align-items: center;
-            justify-content: center;
+            gap: 40px;
+            align-items: flex-start;
+            justify-content: space-between;
+            max-width: 1200px;
+            width: 100%;
+            padding: 20px;
         }
 
         .content img {
@@ -44,14 +37,15 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
+        .logo-image {
+            max-width: 200px;
+            height: auto;
+        }
+
         .content .text {
             max-width: 500px;
             line-height: 1.6;
             color: #333;
-        }
-
-        .text h2 {
-            margin-top: 0;
         }
 
         .social-links {
@@ -88,18 +82,17 @@
 </head>
 
 <body>
-    <header>
-        <h1>Paul Stotts</h1>
-    </header>
     <div class="content">
         <img src="/images/paulphoto.jpg" alt="Paul Stotts">
-        <div class="text">
-            <h2>About Me</h2>
-            <p>Hi, I'm Paul. I'm a Detroit native but currently live in Minneapolis by way of the Pacific Northwest. I’m an
-                entrepreneur at heart and Managing Partner of True Tracking and Precision Fleet Support.</p>
-            <p>In my leisure time I enjoy traveling, playing guitar and investing in the singularity. I also enjoy taking
-                short-term positions, futures, and stock options as a form of slightly-educated gambling. My sports
-                allegiances lie with the Detroit Tigers, Minnesota Wild, and the Portland Timbers.</p>
+        <div>
+            <img src="/images/PaulStottsCircle.png" alt="Paul Stotts Logo" class="logo-image">
+            <div class="text">
+                <p>Hi, I'm Paul. I'm a Detroit native but currently live in Minneapolis by way of the Pacific Northwest. I’m an
+                    entrepreneur at heart and Managing Partner of True Tracking and Precision Fleet Support.</p>
+                <p>In my leisure time I enjoy traveling, playing guitar and investing in the singularity. I also enjoy taking
+                    short-term positions, futures, and stock options as a form of slightly-educated gambling. My sports
+                    allegiances lie with the Detroit Tigers, Minnesota Wild, and the Portland Timbers.</p>
+            </div>
         </div>
     </div>
     <div class="social-links">
