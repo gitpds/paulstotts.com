@@ -28,7 +28,7 @@
       - Keep overall width/padding.
       - Gap drastically reduced from 24px -> 5px (~20%).
     */
-    .content {
+    /* .content {
       display: flex;
       align-items: flex-start;
       justify-content: center;
@@ -36,6 +36,16 @@
       width: 100%;
       padding: 2px;
       /* gap: 2px; Previously 24px */
+    /* } */
+    .content {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      max-width: 1440px;
+      width: 100%;
+      padding: 2px;
+      gap: 24px; /* Adjust the gap if needed */
+      flex-direction: row-reverse; /* Reverses the layout */
     }
 
     /* Photo ~20% larger: 540px -> 648px */
@@ -45,8 +55,8 @@
     }
 
     .photo img {
-      width: 90%;
-      height: 100%;
+      width: 100%;
+      height: auto;
       display: block;
     }
 
