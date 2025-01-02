@@ -6,9 +6,9 @@
   <title>Paul Stotts</title>
   <link rel="icon" href="/images/favicon.png" type="image/png"/>
   <style>
-    /* Keep base font size at 18px */
+    /* Reduced base font size by ~40% from 18px -> 11px */
     html {
-      font-size: 18px;
+      font-size: 11px;
     }
 
     body {
@@ -23,21 +23,26 @@
       min-height: 100vh;
     }
 
-    /* Content area */
+    /*
+      Container is also shrunk ~40%:
+        from 2400px max-width -> 1440px,
+        from 80px padding -> 48px,
+        from 80px gap -> 48px
+    */
     .content {
       display: flex;
       align-items: flex-start;
       justify-content: center;
-      max-width: 2400px; /* Double original 1200px */
+      max-width: 1440px; 
       width: 100%;
-      padding: 80px;
-      gap: 80px;
+      padding: 48px;
+      gap: 48px;
     }
 
-    /* Left column: photo (75% of what was 1200px → 900px) */
+    /* Photo goes from 900px max-width -> ~540px */
     .photo {
       flex: 1;
-      max-width: 900px; 
+      max-width: 540px; 
     }
 
     .photo img {
@@ -46,40 +51,53 @@
       display: block;
     }
 
-    /* Right column: circle + text */
+    /*
+      Right column:
+      - Circle: from 500px -> 300px (approx. 40% smaller).
+    */
     .details {
       flex: 1;
-      max-width: 1200px; /* Keep right column the same overall width */
+      max-width: 720px; /* ~40% off 1200px if you prefer symmetrical scaling */
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
-    /* Circle logo remains the same size (500px). */
     .logo img {
-      width: 500px;
-      height: 500px;
+      width: 300px;
+      height: 300px;
       border-radius: 50%;
       object-fit: cover;
     }
 
-    /* Text: reduce size to 75% of 2.4rem → 1.8rem */
+    /*
+      Text from 1.8rem -> ~1.1rem (60% of 1.8 = 1.08, rounding a bit).
+      This still depends on the html font-size (11px base).
+    */
     .text {
-      margin-top: 40px;
-      line-height: 1.6;
+      margin-top: 2rem;
+      line-height: 1.5;
       color: #333;
-      font-size: 1.8rem; 
+      font-size: 1.1rem; 
       text-align: left;
       width: 100%;
-      max-width: 900px; 
+      max-width: 540px; 
     }
 
-    /* Social links: keep as is (48x48 icons) */
+    /* Style the first line (HI, I'M PAUL.) to look like in the screenshot */
+    .text .intro {
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 1.4rem; /* a bit larger than paragraphs for emphasis */
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+    }
+
+    /* Social links area: also reduce ~40% from 48px -> ~29px */
     .social-links {
-      margin-top: 60px;
+      margin-top: 3rem;
       display: flex;
-      gap: 40px;
-      font-size: 2rem;
+      gap: 2rem; 
     }
 
     .social-links a {
@@ -88,22 +106,22 @@
     }
 
     .social-links img {
-      width: 48px;
-      height: 48px;
+      width: 29px; 
+      height: 29px;
       display: block;
     }
 
-    /* Footer text */
+    /* Footer text also scaled down from 1.8rem -> ~1.1rem */
     footer {
-      margin-top: 40px;
-      font-size: 1.8rem;
+      margin-top: 3rem;
+      font-size: 1.1rem;
       color: #555;
       text-align: center;
     }
   </style>
-  <!-- Use Inter (modern font) instead of Roboto -->
+  <!-- Inter (modern font) -->
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
     rel="stylesheet"
   />
 </head>
@@ -115,14 +133,14 @@
       <img src="/images/paulphoto.jpg" alt="Paul Stotts" />
     </div>
 
-    <!-- Right column: Circle on top, text below -->
+    <!-- Right column: Circle + text -->
     <div class="details">
       <div class="logo">
         <img src="/images/PaulStottsCircle.png" alt="Paul Stotts Logo" />
       </div>
       <div class="text">
-        <!-- Separate line for the intro -->
-        <p>Hi, I'm Paul</p>
+        <!-- Styled to match your screenshot: uppercase, bold, and period at the end -->
+        <p class="intro">HI, I'M PAUL.</p>
         <p>
           I'm a Detroit native but currently live in Minneapolis by way of the Pacific Northwest.
           I’m an entrepreneur at heart and Managing Partner of True Tracking and Precision Fleet Support.
@@ -136,7 +154,7 @@
     </div>
   </div>
 
-  <!-- Social icons: using local SVGs at 48x48 -->
+  <!-- Social icons: local SVGs, now ~29x29 -->
   <div class="social-links">
     <a href="https://twitter.com/pauldstotts" target="_blank">
       <img src="/images/x.svg" alt="X (formerly Twitter)" />
