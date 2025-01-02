@@ -6,9 +6,9 @@
   <title>Paul Stotts</title>
   <link rel="icon" href="/images/favicon.png" type="image/png"/>
   <style>
-    /* Scale base font-size a bit larger. Adjusted to double. */
+    /* Base font-size: doubled from 18px -> 36px */
     html {
-      font-size: 36px; /* Increased from 18px to 36px */
+      font-size: 36px;
     }
 
     body {
@@ -23,20 +23,21 @@
       min-height: 100vh;
     }
 
+    /* Doubling max-width and spacing to accommodate bigger content */
     .content {
       display: flex;
       align-items: flex-start;
       justify-content: center;
-      max-width: 2400px; /* Doubled from 1200px */
+      max-width: 2400px; /* was 1200px */
       width: 100%;
-      padding: 80px; /* Doubled from 40px */
-      gap: 80px; /* Doubled from 40px */
+      padding: 80px;    /* was 40px */
+      gap: 80px;        /* was 40px */
     }
 
     /* Left column: photo */
     .photo {
       flex: 1;
-      max-width: 1200px; /* Doubled from 600px */
+      max-width: 1200px; /* was 600px */
     }
 
     .photo img {
@@ -45,97 +46,65 @@
       display: block;
     }
 
-    /* Right column: logo on top, text below */
+    /* Right column */
     .details {
       flex: 1;
-      max-width: 1200px; /* Doubled from 600px */
+      max-width: 1200px; /* was 600px */
       display: flex;
-      flex-direction: column; /* So circle is on top, text below */
-      align-items: center;    /* Center them horizontally */
+      flex-direction: column;
+      align-items: center;
     }
 
+    /* Doubled the circle logo dimensions */
     .logo img {
-      width: 500px; /* Doubled from 250px */
-      height: 500px; /* Doubled from 250px */
+      width: 500px;  /* was 250px */
+      height: 500px; /* was 250px */
       border-radius: 50%;
       object-fit: cover;
     }
 
+    /* Text area: doubled from 1.2rem -> 2.4rem */
     .text {
-      margin-top: 40px; /* Doubled from 20px */
+      margin-top: 40px; /* a bit bigger spacing if desired */
       line-height: 1.6;
       color: #333;
-      font-size: 2.4rem; /* Doubled from 1.2rem */
-      text-align: left;  /* Or center, if you prefer */
+      font-size: 2.4rem;
+      text-align: left;
       width: 100%;
-      max-width: 900px; /* Doubled from 450px */
+      max-width: 900px; /* was 450px */
     }
 
-    /* Social links (icons) */
+    /* Social links */
     .social-links {
-      margin-top: 60px; /* Doubled from 30px */
+      margin-top: 60px; /* was 30px */
       display: flex;
-      gap: 40px; /* Doubled from 20px */
-      font-size: 2rem; /* Doubled from 1rem */
+      gap: 40px;       /* was 20px */
+      font-size: 2rem; /* was 1rem, if you need text around icons */
     }
 
-    /* Each anchor will display an icon */
     .social-links a {
       display: inline-block;
       text-decoration: none;
     }
 
-    /* Icon images (SVG, PNG, etc.) */
+    /* Double icon size: 32px -> 64px */
     .social-links img {
-      width: 64px;  /* Doubled from 32px */
-      height: 64px; /* Doubled from 32px */
+      width: 64px;
+      height: 64px;
       display: block;
     }
 
     footer {
-      margin-top: 40px; /* Doubled from 20px */
-      font-size: 1.8rem; /* Doubled from 0.9rem */
+      margin-top: 40px; /* was 20px */
+      font-size: 1.8rem; /* was 0.9rem */
       color: #555;
       text-align: center;
-    }
-
-    /* Optional: Adjust responsive behavior if needed */
-    @media (max-width: 768px) {
-      .content {
-        flex-direction: column;
-        padding: 40px; /* Adjust padding for smaller screens */
-        gap: 40px;     /* Adjust gap for smaller screens */
-      }
-
-      .logo img {
-        width: 300px;
-        height: 300px;
-      }
-
-      .text {
-        max-width: 600px;
-      }
-
-      .social-links {
-        font-size: 3rem;
-      }
-
-      .social-links img {
-        width: 96px;
-        height: 96px;
-      }
-
-      footer {
-        font-size: 2.4rem;
-      }
     }
   </style>
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
     rel="stylesheet"
   />
-  <!-- Include Font Awesome for icons -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -156,30 +125,30 @@
           I’m an entrepreneur at heart and Managing Partner of True Tracking and Precision Fleet Support.
         </p>
         <p>
-          In my leisure time I enjoy traveling, playing guitar and investing in the singularity. 
-          I also enjoy taking short-term positions, futures, and stock options as a form of slightly-educated gambling. 
+          In my leisure time I enjoy traveling, playing guitar and investing in the singularity.
+          I also enjoy taking short-term positions, futures, and stock options as a form of slightly-educated gambling.
           My sports allegiances lie with the Detroit Tigers, Minnesota Wild, and the Portland Timbers.
         </p>
       </div>
     </div>
   </div>
 
-  <!-- Social icons (using Font Awesome) -->
+  <!-- Social icons: using local SVGs -->
   <div class="social-links">
     <a href="https://twitter.com/pauldstotts" target="_blank">
-      <i class="fab fa-twitter"></i>
+      <img src="/images/x.svg" alt="X (formerly Twitter)" />
     </a>
     <a href="https://linkedin.com/in/pdstotts" target="_blank">
-      <i class="fab fa-linkedin"></i>
+      <img src="/images/linkedin.svg" alt="LinkedIn" />
     </a>
     <a href="https://www.instagram.com/temperexpectations/" target="_blank">
-      <i class="fab fa-instagram"></i>
+      <img src="/images/instagram.svg" alt="Instagram" />
     </a>
     <a href="https://github.com/gitpds" target="_blank">
-      <i class="fab fa-github"></i>
+      <img src="/images/github.svg" alt="GitHub" />
     </a>
     <a href="mailto:paul@paulstotts.com">
-      <i class="fas fa-envelope"></i>
+      <img src="/images/email.svg" alt="Email" />
     </a>
   </div>
 
