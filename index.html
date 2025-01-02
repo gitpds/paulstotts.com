@@ -23,11 +23,7 @@
       min-height: 100vh;
     }
 
-    /*
-      Container:
-      - Keep overall width/padding.
-      - Gap drastically reduced from 24px -> 5px (~20%).
-    */
+    /* Reduce the gap further between columns */
     .content {
       display: flex;
       align-items: flex-start;
@@ -35,7 +31,7 @@
       max-width: 1440px;
       width: 100%;
       padding: 2px;
-      gap: 5px;  /* Reduced from 24px to ~20% of original */
+      gap: 2px;  /* Reduced even further */
     }
 
     /* Photo ~20% larger: 540px -> 648px */
@@ -58,6 +54,9 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: flex-start;
+      margin-left: auto;  /* Add this */
+      margin-right: auto; /* Add this */
     }
 
     .logo img {
@@ -79,6 +78,8 @@
       font-size: 1.7rem;
       color: #333;
       text-align: left;
+      margin-left: auto;  /* Add this */
+      margin-right: auto; /* Add this */
     }
 
     /* Spacing between paragraphs */
