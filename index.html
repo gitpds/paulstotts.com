@@ -6,9 +6,9 @@
   <title>Paul Stotts</title>
   <link rel="icon" href="/images/favicon.png" type="image/png"/>
   <style>
-    /* Reduced base font size by ~40% from 18px -> 11px */
+    /* Increase base font-size slightly (from 11px -> 12px) for larger text. */
     html {
-      font-size: 11px;
+      font-size: 12px;
     }
 
     body {
@@ -24,25 +24,24 @@
     }
 
     /*
-      Container is also shrunk ~40%:
-        from 2400px max-width -> 1440px,
-        from 80px padding -> 48px,
-        from 80px gap -> 48px
+      Overall container:
+      - Reduced padding from 48px -> 32px
+      - Reduced gap from 48px -> 24px
     */
     .content {
       display: flex;
       align-items: flex-start;
       justify-content: center;
-      max-width: 1440px; 
+      max-width: 1440px;
       width: 100%;
-      padding: 48px;
-      gap: 48px;
+      padding: 32px;
+      gap: 24px;
     }
 
-    /* Photo goes from 900px max-width -> ~540px */
+    /* Left column: photo still ~540px wide */
     .photo {
       flex: 1;
-      max-width: 540px; 
+      max-width: 540px;
     }
 
     .photo img {
@@ -51,13 +50,10 @@
       display: block;
     }
 
-    /*
-      Right column:
-      - Circle: from 500px -> 300px (approx. 40% smaller).
-    */
+    /* Right column: keep the circle at 300x300, narrower max-width for details */
     .details {
       flex: 1;
-      max-width: 720px; /* ~40% off 1200px if you prefer symmetrical scaling */
+      max-width: 720px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -71,33 +67,38 @@
     }
 
     /*
-      Text from 1.8rem -> ~1.1rem (60% of 1.8 = 1.08, rounding a bit).
-      This still depends on the html font-size (11px base).
+      Text box: ~50% wider than the 300px circle = 450px.
+      Increase font-size a bit (1.3rem) and tighten line-height to 1.4.
     */
     .text {
-      margin-top: 2rem;
-      line-height: 1.5;
-      color: #333;
-      font-size: 1.1rem; 
-      text-align: left;
+      margin-top: 1.5rem;
+      max-width: 450px;
       width: 100%;
-      max-width: 540px; 
+      line-height: 1.4;
+      font-size: 1.3rem;
+      color: #333;
+      text-align: left;
     }
 
-    /* Style the first line (HI, I'M PAUL.) to look like in the screenshot */
+    /* Spacing between paragraphs */
+    .text p {
+      margin-bottom: 1rem;
+    }
+
+    /* Style the first line to match your screenshot */
     .text .intro {
       text-transform: uppercase;
       font-weight: 600;
-      font-size: 1.4rem; /* a bit larger than paragraphs for emphasis */
+      font-size: 1.4rem;
       letter-spacing: 0.05em;
       margin-bottom: 1rem;
     }
 
-    /* Social links area: also reduce ~40% from 48px -> ~29px */
+    /* Social links, reduce margin-top if desired */
     .social-links {
       margin-top: 3rem;
       display: flex;
-      gap: 2rem; 
+      gap: 2rem;
     }
 
     .social-links a {
@@ -105,13 +106,14 @@
       text-decoration: none;
     }
 
+    /* Icons: Keep around 29px if you like, or 24px for even smaller. */
     .social-links img {
-      width: 29px; 
+      width: 29px;
       height: 29px;
       display: block;
     }
 
-    /* Footer text also scaled down from 1.8rem -> ~1.1rem */
+    /* Footer text smaller, matching body font scale */
     footer {
       margin-top: 3rem;
       font-size: 1.1rem;
@@ -139,7 +141,7 @@
         <img src="/images/PaulStottsCircle.png" alt="Paul Stotts Logo" />
       </div>
       <div class="text">
-        <!-- Styled to match your screenshot: uppercase, bold, and period at the end -->
+        <!-- Styled heading -->
         <p class="intro">HI, I'M PAUL.</p>
         <p>
           I'm a Detroit native but currently live in Minneapolis by way of the Pacific Northwest.
@@ -154,7 +156,7 @@
     </div>
   </div>
 
-  <!-- Social icons: local SVGs, now ~29x29 -->
+  <!-- Social icons: local SVGs -->
   <div class="social-links">
     <a href="https://twitter.com/pauldstotts" target="_blank">
       <img src="/images/x.svg" alt="X (formerly Twitter)" />
