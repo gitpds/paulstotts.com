@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Paul Stotts</title>
-  <link rel="icon" href="/images/favicon.png" type="image/png">
+  <link rel="icon" href="/images/favicon.png" type="image/png"/>
   <style>
-    /* Scales up everything a bit more than normal */
+    /* Scale base font-size a bit larger. Adjust as desired. */
     html {
-      font-size: 18px; /* Adjust up/down to taste for overall sizing */
+      font-size: 18px;
     }
 
     body {
@@ -29,72 +29,67 @@
       justify-content: center;
       max-width: 1200px;
       width: 100%;
-      padding: 40px; /* Increased for breathing room */
+      padding: 40px;
       gap: 40px;
     }
 
+    /* Left column: photo */
     .photo {
       flex: 1;
-      max-width: 600px; /* Larger photo area */
+      max-width: 600px;
     }
 
     .photo img {
       width: 100%;
       height: auto;
+      display: block;
     }
 
-    /* Right side: circle logo and text side-by-side */
+    /* Right column: logo on top, text below */
     .details {
       flex: 1;
-      display: flex;
-      flex-direction: row; /* Place logo and text next to each other */
-      align-items: center;
       max-width: 600px;
-      gap: 20px;
+      display: flex;
+      flex-direction: column; /* So circle is on top, text below */
+      align-items: center;    /* Center them horizontally */
     }
 
     .logo img {
-      /* Make the logo bigger, close to photo's height */
-      width: 250px; 
-      height: 250px; 
+      width: 250px;
+      height: 250px;
       border-radius: 50%;
       object-fit: cover;
     }
 
     .text {
+      margin-top: 20px;
       line-height: 1.6;
       color: #333;
       font-size: 1.2rem; /* Larger text */
-      flex: 1; /* Let the text expand */
+      text-align: left;  /* Or center, if you prefer */
+      width: 100%;
+      max-width: 450px;
     }
 
+    /* Social links (icons) */
     .social-links {
       margin-top: 30px;
       display: flex;
-      gap: 15px;
-      font-size: 1rem; /* Bumped button text size */
+      gap: 20px;
+      font-size: 1rem;
     }
 
+    /* Each anchor will display an icon */
     .social-links a {
-      color: #fff;
-      background: #0073b1;
-      padding: 15px 20px;
+      display: inline-block;
       text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
     }
 
-    .social-links a.twitter {
-      background: #1da1f2;
-    }
-
-    .social-links a.github {
-      background: #333;
-    }
-
-    /* Use same style for email button, optionally choose a different color */
-    .social-links a.email {
-      background: #0073b1;
+    /* Icon images (SVG, PNG, etc.) */
+    .social-links img {
+      width: 32px;  /* Adjust icon size */
+      height: 32px;
+      display: block;
     }
 
     footer {
@@ -104,38 +99,57 @@
       text-align: center;
     }
   </style>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
 </head>
 
 <body>
   <div class="content">
+    <!-- Left column: Photo -->
     <div class="photo">
-      <img src="/images/paulphoto.jpg" alt="Paul Stotts">
+      <img src="/images/paulphoto.jpg" alt="Paul Stotts" />
     </div>
 
-    <!-- Details area: Logo and text side-by-side -->
+    <!-- Right column: Circle on top, text below -->
     <div class="details">
       <div class="logo">
-        <img src="/images/PaulStottsCircle.png" alt="Paul Stotts Logo">
+        <img src="/images/PaulStottsCircle.png" alt="Paul Stotts Logo" />
       </div>
       <div class="text">
-        <p>Hi, I'm Paul. I'm a Detroit native but currently live in Minneapolis by way of the Pacific Northwest. I’m an
-          entrepreneur at heart and Managing Partner of True Tracking and Precision Fleet Support.</p>
-        <p>In my leisure time I enjoy traveling, playing guitar and investing in the singularity. I also enjoy taking
-          short-term positions, futures, and stock options as a form of slightly-educated gambling. My sports
-          allegiances lie with the Detroit Tigers, Minnesota Wild, and the Portland Timbers.</p>
+        <p>
+          Hi, I'm Paul. I'm a Detroit native but currently live in Minneapolis by way of the Pacific Northwest.
+          I’m an entrepreneur at heart and Managing Partner of True Tracking and Precision Fleet Support.
+        </p>
+        <p>
+          In my leisure time I enjoy traveling, playing guitar and investing in the singularity. 
+          I also enjoy taking short-term positions, futures, and stock options as a form of slightly-educated gambling. 
+          My sports allegiances lie with the Detroit Tigers, Minnesota Wild, and the Portland Timbers.
+        </p>
       </div>
     </div>
   </div>
 
+  <!-- Social icons (inline images). Replace with your own icon files -->
   <div class="social-links">
-    <a href="https://twitter.com/pauldstotts" target="_blank" class="twitter">Twitter</a>
-    <a href="https://www.linkedin.com/in/pdstotts/" target="_blank">LinkedIn</a>
-    <a href="https://www.instagram.com/temperexpectations/" target="_blank">Instagram</a>
-    <a href="https://github.com/gitpds" target="_blank" class="github">GitHub</a>
-    <!-- New Email button -->
-    <a href="mailto:paul@paulstotts.com" class="email">Email</a>
+    <a href="https://twitter.com/pauldstotts" target="_blank">
+      <i class="fab fa-twitter" style="font-size: 32px; color: #333;"></i>
+    </a>
+    <a href="https://linkedin.com/in/pdstotts" target="_blank">
+      <i class="fab fa-linkedin" style="font-size: 32px; color: #333;"></i>
+    </a>
+    <a href="https://www.instagram.com/temperexpectations/" target="_blank">
+      <i class="fab fa-instagram" style="font-size: 32px; color: #333;"></i>
+    </a>
+    <a href="https://github.com/gitpds" target="_blank">
+      <i class="fab fa-github" style="font-size: 32px; color: #333;"></i>
+    </a>
+    <a href="mailto:paul@paulstotts.com">
+      <i class="fas fa-envelope" style="font-size: 32px; color: #333;"></i>
+    </a>
   </div>
+  
 
   <footer>
     <p>600 1st Ave Ste 330 #65787 &middot; Seattle, WA &middot; 98104</p>
