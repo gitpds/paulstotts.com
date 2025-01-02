@@ -6,9 +6,9 @@
   <title>Paul Stotts</title>
   <link rel="icon" href="/images/favicon.png" type="image/png"/>
   <style>
-    /* Base font-size: doubled from 18px -> 36px */
+    /* Base font-size back to 18px (half of 36px) to reduce text size */
     html {
-      font-size: 36px;
+      font-size: 18px;
     }
 
     body {
@@ -23,21 +23,21 @@
       min-height: 100vh;
     }
 
-    /* Doubling max-width and spacing to accommodate bigger content */
+    /* Keeping the larger layout, but now text will be smaller due to 18px base */
     .content {
       display: flex;
       align-items: flex-start;
       justify-content: center;
-      max-width: 2400px; /* was 1200px */
+      max-width: 2400px; /* doubled from original 1200px */
       width: 100%;
-      padding: 80px;    /* was 40px */
-      gap: 80px;        /* was 40px */
+      padding: 80px;    /* remains at 80px from the doubled version */
+      gap: 80px;        /* remains at 80px */
     }
 
-    /* Left column: photo */
+    /* Left column: photo container. Kept at the larger size. */
     .photo {
       flex: 1;
-      max-width: 1200px; /* was 600px */
+      max-width: 1200px; /* remains doubled from 600px */
     }
 
     .photo img {
@@ -46,40 +46,41 @@
       display: block;
     }
 
-    /* Right column */
+    /* Right column. Larger container remains, images stay large. */
     .details {
       flex: 1;
-      max-width: 1200px; /* was 600px */
+      max-width: 1200px; /* remains doubled from 600px */
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
-    /* Doubled the circle logo dimensions */
+    /* Circle logo remains large at 500x500. */
     .logo img {
-      width: 500px;  /* was 250px */
-      height: 500px; /* was 250px */
+      width: 500px;
+      height: 500px;
       border-radius: 50%;
       object-fit: cover;
     }
 
-    /* Text area: doubled from 1.2rem -> 2.4rem */
+    /* Text area: We keep 2.4rem, but with a base of 18px, 
+       it's now effectively half the size it was at 36px base. */
     .text {
-      margin-top: 40px; /* a bit bigger spacing if desired */
+      margin-top: 40px; /* still larger spacing if desired */
       line-height: 1.6;
       color: #333;
       font-size: 2.4rem;
       text-align: left;
       width: 100%;
-      max-width: 900px; /* was 450px */
+      max-width: 900px; /* remains doubled from 450px */
     }
 
-    /* Social links */
+    /* Social links. We'll set icons to 48x48 now. */
     .social-links {
-      margin-top: 60px; /* was 30px */
+      margin-top: 60px;
       display: flex;
-      gap: 40px;       /* was 20px */
-      font-size: 2rem; /* was 1rem, if you need text around icons */
+      gap: 40px;
+      font-size: 2rem; /* can adjust if you have text near the icons */
     }
 
     .social-links a {
@@ -87,16 +88,17 @@
       text-decoration: none;
     }
 
-    /* Double icon size: 32px -> 64px */
+    /* Icons at 48x48 */
     .social-links img {
-      width: 64px;
-      height: 64px;
+      width: 48px;
+      height: 48px;
       display: block;
     }
 
+    /* Footer text is now also half as big compared to the previous doubled version. */
     footer {
-      margin-top: 40px; /* was 20px */
-      font-size: 1.8rem; /* was 0.9rem */
+      margin-top: 40px;
+      font-size: 1.8rem; /* half of what it would have been at 36px base */
       color: #555;
       text-align: center;
     }
@@ -133,7 +135,7 @@
     </div>
   </div>
 
-  <!-- Social icons: using local SVGs -->
+  <!-- Social icons: using local SVGs at 48x48 -->
   <div class="social-links">
     <a href="https://twitter.com/pauldstotts" target="_blank">
       <img src="/images/x.svg" alt="X (formerly Twitter)" />
