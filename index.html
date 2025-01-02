@@ -6,9 +6,9 @@
   <title>Paul Stotts</title>
   <link rel="icon" href="/images/favicon.png" type="image/png"/>
   <style>
-    /* Scale base font-size a bit larger. Adjust as desired. */
+    /* Scale base font-size a bit larger. Adjusted to double. */
     html {
-      font-size: 18px;
+      font-size: 36px; /* Increased from 18px to 36px */
     }
 
     body {
@@ -27,16 +27,16 @@
       display: flex;
       align-items: flex-start;
       justify-content: center;
-      max-width: 1200px;
+      max-width: 2400px; /* Doubled from 1200px */
       width: 100%;
-      padding: 40px;
-      gap: 40px;
+      padding: 80px; /* Doubled from 40px */
+      gap: 80px; /* Doubled from 40px */
     }
 
     /* Left column: photo */
     .photo {
       flex: 1;
-      max-width: 600px;
+      max-width: 1200px; /* Doubled from 600px */
     }
 
     .photo img {
@@ -48,35 +48,35 @@
     /* Right column: logo on top, text below */
     .details {
       flex: 1;
-      max-width: 600px;
+      max-width: 1200px; /* Doubled from 600px */
       display: flex;
       flex-direction: column; /* So circle is on top, text below */
       align-items: center;    /* Center them horizontally */
     }
 
     .logo img {
-      width: 250px;
-      height: 250px;
+      width: 500px; /* Doubled from 250px */
+      height: 500px; /* Doubled from 250px */
       border-radius: 50%;
       object-fit: cover;
     }
 
     .text {
-      margin-top: 20px;
+      margin-top: 40px; /* Doubled from 20px */
       line-height: 1.6;
       color: #333;
-      font-size: 1.2rem; /* Larger text */
+      font-size: 2.4rem; /* Doubled from 1.2rem */
       text-align: left;  /* Or center, if you prefer */
       width: 100%;
-      max-width: 450px;
+      max-width: 900px; /* Doubled from 450px */
     }
 
     /* Social links (icons) */
     .social-links {
-      margin-top: 30px;
+      margin-top: 60px; /* Doubled from 30px */
       display: flex;
-      gap: 20px;
-      font-size: 1rem;
+      gap: 40px; /* Doubled from 20px */
+      font-size: 2rem; /* Doubled from 1rem */
     }
 
     /* Each anchor will display an icon */
@@ -87,22 +87,55 @@
 
     /* Icon images (SVG, PNG, etc.) */
     .social-links img {
-      width: 32px;  /* Adjust icon size */
-      height: 32px;
+      width: 64px;  /* Doubled from 32px */
+      height: 64px; /* Doubled from 32px */
       display: block;
     }
 
     footer {
-      margin-top: 20px;
-      font-size: 0.9rem;
+      margin-top: 40px; /* Doubled from 20px */
+      font-size: 1.8rem; /* Doubled from 0.9rem */
       color: #555;
       text-align: center;
+    }
+
+    /* Optional: Adjust responsive behavior if needed */
+    @media (max-width: 768px) {
+      .content {
+        flex-direction: column;
+        padding: 40px; /* Adjust padding for smaller screens */
+        gap: 40px;     /* Adjust gap for smaller screens */
+      }
+
+      .logo img {
+        width: 300px;
+        height: 300px;
+      }
+
+      .text {
+        max-width: 600px;
+      }
+
+      .social-links {
+        font-size: 3rem;
+      }
+
+      .social-links img {
+        width: 96px;
+        height: 96px;
+      }
+
+      footer {
+        font-size: 2.4rem;
+      }
     }
   </style>
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
     rel="stylesheet"
   />
+  <!-- Include Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -131,25 +164,24 @@
     </div>
   </div>
 
-  <!-- Social icons (inline images). Replace with your own icon files -->
+  <!-- Social icons (using Font Awesome) -->
   <div class="social-links">
     <a href="https://twitter.com/pauldstotts" target="_blank">
-      <i class="fab fa-twitter" style="font-size: 32px; color: #333;"></i>
+      <i class="fab fa-twitter"></i>
     </a>
     <a href="https://linkedin.com/in/pdstotts" target="_blank">
-      <i class="fab fa-linkedin" style="font-size: 32px; color: #333;"></i>
+      <i class="fab fa-linkedin"></i>
     </a>
     <a href="https://www.instagram.com/temperexpectations/" target="_blank">
-      <i class="fab fa-instagram" style="font-size: 32px; color: #333;"></i>
+      <i class="fab fa-instagram"></i>
     </a>
     <a href="https://github.com/gitpds" target="_blank">
-      <i class="fab fa-github" style="font-size: 32px; color: #333;"></i>
+      <i class="fab fa-github"></i>
     </a>
     <a href="mailto:paul@paulstotts.com">
-      <i class="fas fa-envelope" style="font-size: 32px; color: #333;"></i>
+      <i class="fas fa-envelope"></i>
     </a>
   </div>
-  
 
   <footer>
     <p>600 1st Ave Ste 330 #65787 &middot; Seattle, WA &middot; 98104</p>
